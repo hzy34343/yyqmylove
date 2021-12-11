@@ -3,7 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>致我最爱的宇琪宝宝</title>
-
+<audio  id="touchstart"  src="bgm.mp3" controls="controls" autoplay="autoplay" loop="loop" style="display:none;" >
+</audio>
 <style type="text/css">
 @font-face {
 	font-family: digit;
@@ -15,7 +16,16 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/garden.js"></script>
 <script type="text/javascript" src="js/functions.js"></script>
-
+<script>
+        function toggleSound() {
+            var music = document.getElementById("touchstart"); 
+            if (music.paused) { 
+                music.paused=false;
+                music.play(); 
+            }  
+        }
+        setInterval("toggleSound()",1);
+</script>
 </head>
 
 <body>
